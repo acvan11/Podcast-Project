@@ -11,18 +11,33 @@ import UIKit
 class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let favoritesController = ViewController()
-        favoritesController.tabBarItem.title = "Favorites"
-        favoritesController.tabBarItem.image = #imageLiteral(resourceName: "favorites")
         
-        let searchNavController = UINavigationController(rootViewController: ViewController())
-        searchNavController.tabBarItem.title = "Search"
-        searchNavController.tabBarItem.image = #imageLiteral(resourceName: "search")
-        
+        // Make the title for Navbar bigger
+        UINavigationBar.appearance().prefersLargeTitles = true
+        tabBar.tintColor = .purple
+        setupViewControllers()
+    }
+    
+    //MARK:- Setup Functions
+    func setupViewControllers() {
         viewControllers = [
-            favoritesController,
-            searchNavController
+            generateNavigationController(with: PodcastsSearchController(), title: "Search", image: #imageLiteral(resourceName: "search")),
+            generateNavigationController(with: ViewController(), title: "Favorites", image: #imageLiteral(resourceName: "favorites")),
+            generateNavigationController(with: ViewController(), title: "Download", image: #imageLiteral(resourceName: "downloads"))
         ]
+    }
+    
+    //MARK:- Helper Functions
+    fileprivate func generateNavigationController(with rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
+        let navController = UINavigationController(rootViewController: rootViewController)
+        //Make the title on the navigation bar bigger
+        //        navController.navigationBar.prefersLargeTitles = true
+        
+        //Show the title on the Navigation bar
+        rootViewController.navigationItem.title = title
+        
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = image
+        return navController
     }
 }

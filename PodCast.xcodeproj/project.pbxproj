@@ -14,6 +14,8 @@
 		334151E8235E223000CAE655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 334151E7235E223000CAE655 /* Assets.xcassets */; };
 		334151EB235E223000CAE655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 334151E9235E223000CAE655 /* LaunchScreen.storyboard */; };
 		334151F3235E225C00CAE655 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334151F2235E225C00CAE655 /* MainTabBarController.swift */; };
+		33D8C3A12361088100A8A64A /* PodcastsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D8C3A02361088100A8A64A /* PodcastsSearchController.swift */; };
+		33D8C3A42361094100A8A64A /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D8C3A32361094100A8A64A /* Podcast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		334151EA235E223000CAE655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		334151EC235E223000CAE655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		334151F2235E225C00CAE655 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		33D8C3A02361088100A8A64A /* PodcastsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchController.swift; sourceTree = "<group>"; };
+		33D8C3A32361094100A8A64A /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		334151DD235E222E00CAE655 /* PodCast */ = {
 			isa = PBXGroup;
 			children = (
+				33D8C3A22361092E00A8A64A /* Models */,
+				33D8C39F2361085B00A8A64A /* Controllers */,
 				334151DE235E222E00CAE655 /* AppDelegate.swift */,
 				334151E0235E222E00CAE655 /* SceneDelegate.swift */,
 				334151E2235E222E00CAE655 /* ViewController.swift */,
@@ -68,6 +74,22 @@
 				334151EC235E223000CAE655 /* Info.plist */,
 			);
 			path = PodCast;
+			sourceTree = "<group>";
+		};
+		33D8C39F2361085B00A8A64A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33D8C3A02361088100A8A64A /* PodcastsSearchController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33D8C3A22361092E00A8A64A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33D8C3A32361094100A8A64A /* Podcast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +165,9 @@
 			files = (
 				334151E3235E222E00CAE655 /* ViewController.swift in Sources */,
 				334151DF235E222E00CAE655 /* AppDelegate.swift in Sources */,
+				33D8C3A42361094100A8A64A /* Podcast.swift in Sources */,
 				334151F3235E225C00CAE655 /* MainTabBarController.swift in Sources */,
+				33D8C3A12361088100A8A64A /* PodcastsSearchController.swift in Sources */,
 				334151E1235E222E00CAE655 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
